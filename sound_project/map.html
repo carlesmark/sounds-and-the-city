@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sounds of the City</title>
+    <link rel ="stylesheet" href="css/bootstrap.css" type="text/css" />
+  <style>
+    #map{
+      height:600px;
+      width:60%;
+      float: right;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class=""container"">
+      <h1><a href=""#"">Sounds And Our City</a> <img src="img/wavbig.gif" alt="Sound Wave Gif"> </h1>
+
+      <div class="navbar">
+            <div class="navbar-inner">
+              <div class="container">
+                <ul class="nav">
+                  <li class="active"><a href="index.html">Home</a></li>
+                  <li><a href="map.html">Map</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Projects</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Projects</a></li>
+                  <li><a href="#">Services</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </header>
+
+<!-- // side bar     -->
+
+<div class="row">
+         <div class="span2">
+
+                     <ul class="nav nav-list">
+               <li class="nav-header">What we are?</li>
+               <li class="active"><a href="#">Home</a></li>
+               <li><a href="#">Materials and Methods</a></li>
+               <li><a href="#">Our Services</a></li>
+               <li><a href="#">About</a></li>
+               <li><a href="#">Contact</a></li>
+               <li class="nav-header">Our Friend</li>
+               <li><a href="#">Google</a></li>
+               <li><a href="#">Yahoo!</a></li>
+               <li><a href="#">Bing</a></li>
+               <li><a href="#">Microsoft</a></li>
+               <li><a href="#">Gadgetic World</a></li>
+           </ul>
+
+
+
+         </div>
+         
+
+
+
+
+
+
+
+  <!-- <h1><center>Sounds of the City</h1> -->
+  <div id="map"></div>
+  <script>
+    function initMap(){
+      // Map options
+      var options = {
+        zoom:11,
+        center:{lat: 40.7128, lng: -74.0060}
+      }
+
+      // New map
+      var map = new google.maps.Map(document.getElementById('map'), options);
+
+      // Listen for click on map
+      google.maps.event.addListener(map, 'click', function(event){
+        // Add marker
+        addMarker({coords:event.latLng});
+      });
+
+
+
+
+
+
+ var markers = [
+   {
+     coords:{lat:40.7128,lng:-74.0060},
+     content:'<h1>Lynn MA</h1>'
+   },
+   {
+     coords:{lat:40.7138,lng:-74.0050},
+     content:'<h1>Amesbury MA</h1>'
+   },
+   {
+     coords:{lat:42.7762,lng:-71.0773}
+   }
+ ];
+
+ // Loop through markers
+ for(var i = 0;i < markers.length;i++){
+   // Add marker
+   addMarker(markers[i]);
+ }
+
+
+
+// Add Marker function
+  function addMarker(props){
+    var marker = new google.maps.Marker({
+       position:props.coords,
+       map: map,
+       icon: 'img/wav.gif',
+       content: '<h1>Sound Here</h1>'
+      });
+
+          // check content
+          if(props.content){
+            var infoWindow = new google.maps.InfoWindow({
+              content:props.content
+            });
+
+            marker.addListener('click', function(){
+              infoWindow.open(map, marker);
+            });
+          }
+        }
+      }
+    </script>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiUnoRrmABv8gjmqgIgO3HQnQvNt6tyDo&callback=initMap">
+  </script>
+</body>
+</html>
