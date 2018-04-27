@@ -1,46 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
   <head>
-  	<title>Swap Videos</title>
-  	<style>
-  		#myVideo{display: block; margin-left:auto; margin-right: auto; width:60%;}
-  	</style>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>YouTube API FullScreen Video</title>
+    <!-- Page that explains the entire API:
+    https://developers.google.com/youtube/iframe_api_reference -->
+    <style>
+      .bgyt {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto; height: auto; 
+        background: url(img/indexVideo.jpg) no-repeat;
+        background-size: cover;
+        /*turned off z-indes:-100 conflict with nav;*/
+        }
+    </style>
   </head>
-<body>
 
-<video id="myVideo" controls autoplay>
-  <source id="mp4_src" src="video/crimeaPutin.mp4" type="video/mp4">
-  <source id="ogg_src"  src="video/crimeaPutin.ogv" type="video/ogg">
-  Your browser does not support the video tag.
-</video>
+  <body>
+    <div id="ytplayer" class="bgyt"></div>
 
-//Click the button to change the video source and re-load the video.</p>
+  <script>
+  // https://developers.google.com/youtube/iframe_api_reference
+  // Load the IFrame Player API code asynchronously.
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/player_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-// button onclick="myFunction1()">Choice One</button>
-// button onclick="myFunction2()">Choice Two</button>
-
-
-
-<script>
-	document.getElementById('myVideo').addEventListener('ended',myHandler);
-    function myHandler(e) {
-        // What you want to do after the event
-        document.getElementById("mp4_src").src = "video/womanInSubway.mp4";
-    	document.getElementById("ogg_src").src = "video/womanInSubway.ogv";
-    	document.getElementById("myVideo").load();
-    }
-    function myFunction1()  {
-    	document.getElementById("mp4_src").src = "video/ilsung.mp4";
-    	document.getElementById("ogg_src").src = "video/ilsung.ogv";
-    	document.getElementById("myVideo").load();
-	}
-
-	function myFunction2()  {
-    	document.getElementById("mp4_src").src = "video/planetExplosion.mp4";
-    	document.getElementById("ogg_src").src = "video/planetExplosion.ogv";
-    	document.getElementById("myVideo").load();
-	}
-</script>
-
+  // Replace the 'ytplayer' element with an <iframe> and
+  // YouTube player after the API code downloads.
+  var player;
+  function onYouTubePlayerAPIReady() {
+    player = new YT.Player('ytplayer', {
+      // ytplayer does not allow fullscreen video, therefore css work around - .bgyt
+      //height: '720',
+      //width: '1080',
+      videoId: 'eObngzd5rZE',
+      playerVars: { //Player Parameters
+        // https://developers.google.com/youtube/player_parameters?playerVersion=HTML5
+        autoplay: 1,
+        controls: 0, // 2 - faster performance, does not allow Flash player to initialize, 0 hides, 1 shows
+        autohide: 1, //hides player bar
+        modestbranding: 1,
+        rel: 0 // turns off grid of related videos at end of playback
+      }
+    });
+  }
+  </script>
 </body>
-</html>
