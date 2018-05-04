@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>codingtrain1</title>
+
+	<script src="js/libraries/p5.js"></script>
+	<script src="js/libraries/p5.dom.js"></script>
+	<script src="js/libraries/p5.sound.js"></script>
+<!-- 	<script src="js/soundinputsketch.js"></script> -->
+<script>
+	var mic, fft;
+
+function setup() {
+   createCanvas(710,400);
+   noFill();
+
+   mic = new p5.AudioIn();
+   mic.start();
+   fft = new p5.FFT();
+   fft.setInput(mic);
+}
+
+function draw() {
+   background(200);
+
+   var spectrum = fft.analyze();
+
+   beginShape();
+   for (i = 0; i<spectrum.length; i++) {
+    vertex(i, map(spectrum[i], 0, 255, height, 0) );
+   }
+   endShape();
+}
+
+new p5();
+	</script>
+	
+	
+</head>
+<body>
+	<canvas id="defaultCanvas0" class="p5Canvas" width="1420" height="800" style="width: 710px; height: 400px;"></canvas>
+</body>
+</html>
