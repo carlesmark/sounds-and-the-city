@@ -9,40 +9,9 @@
 	<script src="libraries/p5.js"></script>
 	<script src="libraries/p5.dom.js"></script>
 	<script src="libraries/p5.sound.js"></script>
-
-	<script>
-
-	var img = [];
-	var index = 0;
-
-	function preload(){
-
-	  img[0] = loadImage("img/soundchart.jpg");
-	  img[1] =  loadImage("img/soundchart1.jpg");
-	}
-
-	function setup(){
-	  createCanvas(400,400);
-	}
-
-	function draw(){
-	  image(img[index],50,50,width,height);
-	}
-
-	function mouseReleased(){
-
-	    //ONLY if click registered inside image
-	    if(mouseX>50 && mouseY>50){
-	          index = index + 1;
-	          if (index == img.length){
-	              index = index - img.length;
-	          }
-	    }
-	}
-
-
-	</script>
-
+<script src="sketch.js" type="text/javascript"></script>
+    <style> body {padding: 0; margin: 0;} canvas {vertical-align: top;} </style>
+	
 
 </body>
 </html>
