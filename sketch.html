@@ -12,22 +12,49 @@
 
 
 	<script>
-					
-var img;  // Declare variable 'img'.
-function setup() {
+		
+var bubbles = [];
+		var img;
+		
+		function preload() {
+			img = load('image/soundchart1.jpg");
+				   
+		function setup() {
   createCanvas(600, 600);
   img = loadImage("img/soundchart.jpg");  // Load the image
 }		
-// When the user clicks the mouse
-function mousePressed() {
-  // Check if mouse is inside the circle
-  var d = dist(mouseX, mouseY, 600, 600);
-  if (d < 600) {
-    // Pick new random color values
-    r = random(255);
-    g = random(255);
-    b = random(255);
-  }
+		
+			
+		// When the user clicks the mouse
+		function mousePressed() {
+		  // Check if mouse is inside the circle
+		  var d = new Bubble(600,600);
+			bubbles.push(d);
+		}
+		function draw() {
+			background(0);
+			for (var i = bubbles.length; i >= 0; i++) {
+				bubbles[i].update();
+				bubbles[i].display();
+			}
+			function Bubble(x,y) {
+				this.x = x;
+				this.y = y;
+				
+				this.display = function() {
+					stroke(255);
+					fill(255, 100);
+					image(img, this.x, this.y);
+					
+				}
+				
+				this.update = function() {
+					this.x = this.x + random(-1, 1);
+					this.y = this.y + random(-1, 1);
+				}
+		
+		}
+			
 		
 
 
