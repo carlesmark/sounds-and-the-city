@@ -290,7 +290,6 @@ a:focus {
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
   width: 940px;
- padding-left: 15px;
 }
 
 .span12 {
@@ -618,6 +617,7 @@ a:focus {
 .container {
   margin-right: auto;
   margin-left: 20px;
+ padding-left: 15px;
   *zoom: 1;
 }
 
