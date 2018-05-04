@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style> padding: 0px </style>
+</head>
+
+<body>
+
+	<script src="js/p5.js"></script>
+	<script src="js/p5.dom.js"></script>
+	<script src="js/p5.sound.js"></script>
+
+	<script>
+
+	<!DOCTYPE html>
+<html>
+<head>
+	<style> padding: 0px </style>
+</head>
+
+<body>
+
+	<script src="js/p5.js"></script>
+	<script src="js/p5.dom.js"></script>
+	<script src="js/p5.sound.js"></script>
+
+	<script>
+
+	var mic, fft;
+
+function setup() {
+   createCanvas(450,450);
+   noFill();
+
+   mic = new p5.AudioIn();
+   mic.start();
+   fft = new p5.FFT();
+   fft.setInput(mic);
+}
+
+function draw() {
+   background(200);
+
+   var spectrum = fft.analyze();
+
+   beginShape();
+   for (i = 0; i<spectrum.length; i++) {
+    vertex(i, map(spectrum[i], 0, 255, height, 0) );
+   }
+   endShape();
+}
+
+
+	</script>
+
+
+	<div class="edit_space">
+<!--           <button id="runButton" class="edit_button">The Sound wave of your current location</button> -->
+<!--           <button id="resetButton" class="reset_button">reset</button> -->
+        </div>
+        <div id="exampleEditor"></div>
+      </div>
+
+
+<footer>
+	<h3>The sound waves of your current location.</h3>
+	</footer>
+
+
+</body>
+</html>
+
+
+
+	</script>
+
+
+	<div class="edit_space">
+<!--           <button id="runButton" class="edit_button">The Sound wave of your current location</button> -->
+<!--           <button id="resetButton" class="reset_button">reset</button> -->
+        </div>
+        <div id="exampleEditor"></div>
+      </div>
+
+
+<footer>
+	<h3>The sound waves of your current location.</h3>
+	</footer>
+
+
+</body>
+</html>
