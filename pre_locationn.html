@@ -15,7 +15,10 @@
 	var mic, fft;
 
 	function setup() {
-	   createCanvas(360,500);
+  var cnv = createCanvas(windowWidth, windowHeight);
+  cnv.style('display', 'block');
+  
+}
 	   noFill();
 
 	   mic = new p5.AudioIn();
