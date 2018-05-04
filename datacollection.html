@@ -2,28 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel ="stylesheet" href="css/bootstrap.css" type="text/css" />
- 
     <title>Heatmaps</title>
-
-      <div class=""container"">
-	
-        <h1>&nbsp;&nbsp;&nbsp;&nbsp;<a href=""#"">Sounds And Our City</a> <img src="img/wavbig.gif" alt="Sound Wave Gif"></h1>
-
-        <div class="navbar">
-              <div class="navbar-inner">
-                <div class="container">
-                  <ul class="nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="map.html">Map</a></li>
-                    <li><a href="interact.html">Your Opinion</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="datacollection.html">Data Collection</a></li>
-                    </ul>
-                </div>
-              </div>
-            </div><!DOCTYPE html>
-
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
@@ -62,18 +41,18 @@
   </head>
 
   <body>
-<!--     <div id="floating-panel">
+    <div id="floating-panel">
       <button onclick="toggleHeatmap()">Toggle Heatmap</button>
       <button onclick="changeGradient()">Change gradient</button>
       <button onclick="changeRadius()">Change radius</button>
       <button onclick="changeOpacity()">Change opacity</button>
-    </div> -->
+    </div>
     <div id="map"></div>
     <script>
 
       // This example requires the Visualization library. Include the libraries=visualization
       // parameter when you first load the API. For example:
-      // <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiUnoRrmABv8gjmqgIgO3HQnQvNt6tyDo&libraries=visualization">
+      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=visualization">
 
       var map, heatmap;
 
@@ -629,12 +608,7 @@
       }
     </script>
     <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiUnoRrmABv8gjmqgIgO3HQnQvNt6tyDo&libraries=visualization&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=visualization&callback=initMap">
     </script>
   </body>
 </html>
-
-<div class="footer, row, spanWidth">
-  <hr>
-<p>&copy;  Mark Carles, 2018</p>
-</div>
