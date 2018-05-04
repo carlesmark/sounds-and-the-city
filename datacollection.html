@@ -63,12 +63,12 @@
 		    </header>
     
     
-    <div id="floating-panel">
+<!--     <div id="floating-panel">
       <button onclick="toggleHeatmap()">Toggle Heatmap</button>
       <button onclick="changeGradient()">Change gradient</button>
       <button onclick="changeRadius()">Change radius</button>
       <button onclick="changeOpacity()">Change opacity</button>
-    </div>
+    </div> -->
     <div id="map"></div>
     <script>
 
@@ -80,7 +80,7 @@
 
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 11,
+          zoom: 12,
           center: {lat: 40.7128, lng: -74.0060},
           mapTypeId: 'satellite'
         });
