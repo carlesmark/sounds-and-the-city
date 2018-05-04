@@ -23,7 +23,7 @@ function preload() {
     
 }
 function setup() {
-  createCanvas(displayWidth,displayHeight);
+  createCanvas(550,550);
 }  
 
 function draw() {
