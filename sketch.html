@@ -14,7 +14,7 @@
 	<script>
 		
 var bubbles = [];
-		var img;
+var img;
 		
 		function preload() {
 			img = load('image/soundchart1.jpg");
@@ -28,7 +28,7 @@ var bubbles = [];
 		// When the user clicks the mouse
 		function mousePressed() {
 		  // Check if mouse is inside the circle
-		  var d = new Bubble(600,600);
+		  var d = new Bubble(mouseX, mouseY);
 			bubbles.push(d);
 		}
 		function draw() {
@@ -37,14 +37,16 @@ var bubbles = [];
 				bubbles[i].update();
 				bubbles[i].display();
 			}
-			function Bubble(x,y) {
+			function Bubble(x,y, img) {
 				this.x = x;
 				this.y = y;
+				this.img = img;
+				
+				
 				
 				this.display = function() {
-					stroke(255);
-					fill(255, 100);
-					image(img, this.x, this.y);
+					imageMode(CENTER);
+					image(this.img, this.x, this.y);
 					
 				}
 				
