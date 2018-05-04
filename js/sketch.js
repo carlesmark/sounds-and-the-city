@@ -2,7 +2,7 @@ var slide_array=[];
 var presscount=1;
 
 function preload() {
-    slide_array[1]=loadImage("img/soundchart1.jpg");
+    slide_array[1]=loadImage("img/soundchart1.gif");
     slide_array[2]=loadImage("img/soundchart2.jpg");
     slide_array[3]=loadImage("img/soundchart3.jpg");
     slide_array[4]=loadImage("img/soundchart4.jpg");
