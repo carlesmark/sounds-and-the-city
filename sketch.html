@@ -1,88 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<style> padding: 0px </style>
+
 </head>
 
 <body>
 
-	<script src="js/p5.js"></script>
-	<script src="js/p5.dom.js"></script>
-	<script src="js/p5.sound.js"></script>
-
+	<script src="libraries/p5.js"></script>
+	<script src="libraries/p5.dom.js"></script>
+	<script src="libraries/p5.sound.js"></script>
 
 	<script>
-		
-var bubbles = [];
-var pic = [];
-		
-		function preload() {
-			for (var i = 0; i < 18; i++) {
-				pic[i] = loadImage('img/soundchart' + i + '.jpg');
-			}
-		
-				   
-		function setup() {
-  createCanvas(600, 600);
-  img = loadImage("img/soundchart.jpg");  // Load the image
-}		
-		
-			
-		// When the user clicks the mouse
-		function mousePressed() {
-		  // Check if mouse is inside the circle
-		var r = floor(0, pic.length);
-		  var d = new Bubble(mouseX, mouseY, pic[i]);
-			bubbles.push(d);
-		}
-		function draw() {
-			background(0);
-			for (var i = bubbles.length; i >= 0; i++) {
-				bubbles[i].update();
-				bubbles[i].display();
-			}
-			function Bubble(x,y, img) {
-				this.x = x;
-				this.y = y;
-				this.img = img;
-				
-				
-				
-				this.display = function() {
-					imageMode(CENTER);
-					image(this.img, this.x, this.y);
-					
-				}
-				
-				this.update = function() {
-					this.x = this.x + random(-1, 1);
-					this.y = this.y + random(-1, 1);
-				}
-		
-		}
-			
-		
 
+	var img = [];
+	var index = 0;
+
+	function preload(){
+
+	  img[0] = loadImage("img/soundchart.jpg");
+	  img[1] =  loadImage("img/soundchart1.jpg");
+	}
+
+	function setup(){
+	  createCanvas(400,400);
+	}
+
+	function draw(){
+	  image(img[index],50,50,width,height);
+	}
+
+	function mouseReleased(){
+
+	    //ONLY if click registered inside image
+	    if(mouseX>50 && mouseY>50){
+	          index = index + 1;
+	          if (index == img.length){
+	              index = index - img.length;
+	          }
+	    }
+	}
 
 
 	</script>
 
-
-
-</body>
-</html>
-
-
-
-	</script>
-
-
-	<div class="edit_space">
-<!--           <button id="runButton" class="edit_button">The Sound wave of your current location</button> -->
-<!--           <button id="resetButton" class="reset_button">reset</button> -->
-        </div>
-        <div id="exampleEditor"></div>
-      </div>
 
 </body>
 </html>
