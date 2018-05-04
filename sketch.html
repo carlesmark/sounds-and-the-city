@@ -17,9 +17,10 @@ var bubbles = [];
 var pic = [];
 		
 		function preload() {
-			pic[0] = loadImage('img/soundchart1.jpg');
-			pic[1] = loadImage('img/soundchart2.jpg');
-			pic[2] = loadImage('img/soundchart3.jpg');
+			for (var i = 0; i < 18; i++) {
+				pic[i] = loadImage('img/soundchart' + i + '.jpg');
+			}
+		
 				   
 		function setup() {
   createCanvas(600, 600);
