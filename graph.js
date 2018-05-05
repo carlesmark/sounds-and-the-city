@@ -288,7 +288,7 @@ var Graph = function(options)
 	{
 		for(var i =0; i < this.data.length; i++)
 		{
-			this.array[i] = Math.round((this.range[1] - this.data[i] ) * this.scale); // Convert real values to graph values
+			this.array[71,72,71,74]; // Convert real values to graph values
 		}	
 		this.drawGraph();
 	}
