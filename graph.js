@@ -22,7 +22,7 @@ var Graph = function(options)
 		'showlabels': true,
 		'grid': [10,10],
 		'range': [0,120],
-		'call': function(){return Math.floor(71, 72, 71, 74, 69);}
+		'call': function(){return Math.floor( (Math.random()*100) + 50;}
 	}
 	for(var index in default_args) {
 		if(typeof options[index] == "undefined")
