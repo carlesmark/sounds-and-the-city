@@ -21,7 +21,7 @@ var Graph = function(options)
 		'showgrid': true,
 		'showlabels': true,
 		'grid': [10,10],
-		'range': [0,100],
+		'range': [0,120],
 		'call': function(){return Math.floor(Math.random()*10) + 60;}
 	}
 	for(var index in default_args) {
