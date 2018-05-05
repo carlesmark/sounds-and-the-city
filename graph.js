@@ -9,7 +9,7 @@ var Graph = function(options)
 {
 	var default_args = {
 		'id': "graph",
-		'interval':	300,
+		'interval':	30,
 		'showline':	true,
 		'showfill':	true,
 		'lineWidth':	2,
