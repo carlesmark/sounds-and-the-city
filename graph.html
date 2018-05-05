@@ -16,6 +16,26 @@
     <body style = "background: #090909 center center no-repeat;background-size:100% 100%;width:100%;height:100%;position:absolute;">
         <div style = "background:#111;position:absolute;left:5%;top:5%;bottom:5%;right:5%;z-index:10;box-shadow:0 1px 10px #000, inset 0 0px 0px 1px #222;border-radius:4px;">
             <canvas id="myCanvas1" width="800" height="800"></canvas>
+            
+            
+            <script>
+                var dataset = [ 500, 300, 100, 200, 800 ];
+var canvas = document.getElementById( 'myCanvas1' );
+
+// Initialize basic graph graph
+var lyne = new Lyne.Graph( dataset, canvas );
+
+// Customize with themes
+var lyne = new Lyne.Graph( dataset, canvas, Lyne.Themes.Dark );
+var lyne = new Lyne.Graph( dataset, canvas, Lyne.Themes.Light );
+
+// Custom Themes: More information below
+var lyne = new Lyne.Graph( dataset, canvas, customTheme );
+                
+            </script>
+            
+            
+            
         </div>
     </body>
     <script>
