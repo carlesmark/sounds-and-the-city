@@ -22,8 +22,9 @@ var Graph = function(options)
 		'showlabels': true,
 		'grid': [10,10],
 		'range': [0,120],
-		'data': [71, 72, 80, 90];} 
+		'call': function(){return Math.floor(Math.random()*100) + 50;} // Function from which data is obtained
 }
+
 	for(var index in default_args) {
 		if(typeof options[index] == "undefined")
 			options[index] = default_args[index];
