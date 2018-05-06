@@ -12,7 +12,7 @@ function preload() {
     slide_array[8]=loadImage("img/soundchart8.jpg");
     slide_array[9]=loadImage("img/soundchart9.jpg");
     slide_array[10]=loadImage("img/soundchart10.jpg");
-//     slide_array[11]=loadImage("img/soundchart11.jpg");
+    slide_array[11]=loadImage("img/soundchart11.jpg");
 //     slide_array[12]=loadImage("img/soundchart12.jpg");
 //     slide_array[13]=loadImage("img/soundchart13.jpg");
 //     slide_array[14]=loadImage("img/soundchart14.jpg");
