@@ -5,7 +5,7 @@ function preload() {
     slide_array[1]=loadImage("img/soundchart1.gif");
     slide_array[2]=loadImage("img/soundchart2.gif");
     slide_array[3]=loadImage("img/soundchart3.jpg");
-//     slide_array[4]=loadImage("img/soundchart4.jpg");
+    slide_array[4]=loadImage("img/soundchart4.jpg");
 //     slide_array[5]=loadImage("img/soundchart5.jpg");
 //     slide_array[6]=loadImage("img/soundchart6.jpg");
 //     slide_array[7]=loadImage("img/soundchart7.jpg");
