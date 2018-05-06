@@ -58,7 +58,7 @@ var Graph = function(options)
 		this.grid_x = Math.floor(options['grid'][0] * this.scale);
 		this.grid_y = Math.floor(options['grid'][1] * this.scale);
 	}
-	this.array = [];
+	this.array = [80, 81, 82];
 
 	var _self = this;
 	
