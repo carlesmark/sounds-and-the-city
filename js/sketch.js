@@ -28,15 +28,13 @@ function setup() {
 
 function draw() {
    image(slide_array[presscount],100,0);
+    
+    {
+    nofill;
+    cursor(HAND);
+  } 
 }
 
-
-  if (mouseX < 100) {
-        cursor(hand);
-  } else {
-    cursor(hand);
-  }
-}
 
 function mousePressed(){
  if(presscount==17)
