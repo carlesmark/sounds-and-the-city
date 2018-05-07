@@ -28,7 +28,8 @@ function setup() {
 
 function draw() {
    image(slide_array[presscount],100,0);
-   
+}
+
 
   if (mouseX < 100) {
         cursor(hand);
