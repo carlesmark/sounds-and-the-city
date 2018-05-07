@@ -28,6 +28,13 @@ function setup() {
 
 function draw() {
    image(slide_array[presscount],100,0);
+   }
+
+
+function draw() {
+ 
+    cursor(CROSS);
+  
 }
 
 function mousePressed(){
