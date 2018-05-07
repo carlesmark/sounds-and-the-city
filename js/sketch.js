@@ -31,9 +31,9 @@ function draw() {
 }
 
 function mousePressed(){
- if(presscount==16)
+ if(presscount==17)
  {
-  presscount=0;
+  presscount=17;
  }
 presscount++;
 clear();
