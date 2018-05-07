@@ -33,7 +33,7 @@ function draw() {
 function mousePressed(){
  if(presscount==17)
  {
-  presscount=17;
+  presscount=0;
  }
 presscount++;
 clear();
