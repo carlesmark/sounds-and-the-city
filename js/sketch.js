@@ -30,14 +30,12 @@ function draw() {
    image(slide_array[presscount],100,0);
    }
 
-
-function draw() {
   if (mouseX < 100) {
     cursor(POINTER);
   } else {
     cursor(HAND);
   }
-}
+
 
 function mousePressed(){
  if(presscount==17)
