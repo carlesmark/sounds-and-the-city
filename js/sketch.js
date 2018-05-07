@@ -31,9 +31,9 @@ function draw() {
    
 
   if (mouseX < 100) {
-    cursor(POINTER);
+        cursor(hand);
   } else {
-    cursor(pointer);
+    cursor(hand);
   }
 }
 
