@@ -32,9 +32,11 @@ function draw() {
 
 
 function draw() {
- 
-    cursor(CROSS);
-  
+  if (mouseX < 100) {
+    cursor(POINTER);
+  } else {
+    cursor(HAND);
+  }
 }
 
 function mousePressed(){
