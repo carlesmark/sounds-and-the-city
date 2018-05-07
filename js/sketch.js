@@ -24,16 +24,14 @@ function preload() {
 }
 function setup() {
   createCanvas(600,600);
+    cursor(HAND);
 }  
 
 function draw() {
    image(slide_array[presscount],100,0);
-    
-    {
-    nofill;
-    cursor(HAND);
-  } 
 }
+
+   
 
 
 function mousePressed(){
