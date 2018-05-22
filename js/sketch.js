@@ -26,6 +26,7 @@ function preload() {
 function setup() {
   createCanvas(720,600);
     cursor(HAND);
+    song.play();
 }  
 
 function draw() {
