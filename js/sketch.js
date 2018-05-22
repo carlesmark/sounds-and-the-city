@@ -1,8 +1,9 @@
 var slide_array=[];
 var presscount=1;
+var song;
 
 function preload() {
-    slide_array[1]=loadImage("img/soundchart1.gif"); 
+    slide_array[1]=loadImage("img/soundchart1.gif"); song = loadSound("img/sound.mp3");
     slide_array[2]=loadImage("img/soundchart2.gif");
     slide_array[3]=loadImage("img/soundchart3.jpg");
     slide_array[4]=loadImage("img/soundchart4.jpg");
