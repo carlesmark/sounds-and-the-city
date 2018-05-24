@@ -26,11 +26,11 @@ function preload() {
 function setup() {
   createCanvas(720,600);
     cursor(HAND);
-    song.play();
 }  
 
 function draw() {
    image(slide_array[presscount],100,0);
+    song.play();
 }
 
    
