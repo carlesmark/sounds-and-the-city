@@ -30,13 +30,13 @@ function setup() {
 
 function draw() {
    image(slide_array[presscount],100,0);
-    song.play();
 }
 
    
 
 
 function mousePressed(){
+    song.play();
  if(presscount==17)
  {
   presscount=0;
